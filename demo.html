@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>ezImageFilter Examples</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align: center">ezImageFilter Demo</h1>
+            <hr />
+        </div>
+        <div class="row">
+            <h3>Initialize the ezImageFilter object</h3>
+            <pre><code>
+const filter = new ezImageFilter();
+            </code></pre>
+        </div>
+        <div class="row">
+            <h4>Original</h4>
+            <img class="u-max-full-width" src="image.png" id="original" />
+        </div>
+        <div class="row">
+            <h4>toGrayscale</h4>
+            <pre><code>
+const graysacle = document.querySelector("#grayscale");
+graysacle.src = filter.toGrayscale(graysacle);
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="grayscale" />
+        </div>
+        <div class="row">
+            <h4>toBlackAndWhite</h4>
+            <pre><code>
+const bNw = document.querySelector("#bNw");
+bNw.src = filter.toBlackAndWhite(bNw, 120);
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="bNw" />
+        </div>
+        <div class="row">
+            <h4>toRed</h4>
+            <pre><code>
+const red = document.querySelector("#red");
+red.src = filter.toRed(red);
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="red" />
+        </div>
+        <div class="row">
+            <h4>toGreen</h4>
+            <pre><code>
+const green = document.querySelector("#green");
+green.src = filter.toGreen(green);
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="green" />
+        </div>
+        <div class="row">
+            <h4>toBlue</h4>
+            <pre><code>
+const blue = document.querySelector("#blue");
+blue.src = filter.toBlue(blue);
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="blue" />
+        </div>
+        <div class="row">
+            <h4>filterColor(108, 99, 255)</h4>
+            <pre><code>
+const color = document.querySelector("#color");
+color.src = filter.filterColor(color, 108, 99, 255); 
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="color" />
+        </div>
+        <div class="row">
+            <h4>invertColors</h4>
+            <pre><code>
+const invert = document.querySelector("#invert");
+invert.src = filter.invertColors(invert);
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="invert" />
+        </div>
+        <div class="row">
+            <h4>boxBlur</h4>
+            <pre><code>
+const boxBlur = document.querySelector("#boxBlur");
+boxBlur.src = filter.boxBlur(boxBlur, 1);
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="boxBlur" />
+        </div>
+        <div class="row">
+            <h4>edges (no color)</h4>
+            <pre><code>
+const edges = document.querySelector("#edges");
+edges.src = filter.edges(edges); 
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="edges" />
+        </div>
+        <div class="row">
+            <h4>edges (with color)</h4>
+            <pre><code>
+const edgesC = document.querySelector("#edgesC");
+edgesC.src = filter.edges(edgesC, true, 1);
+            </code></pre>
+            <img class="u-max-full-width" src="image.png" id="edgesC" />
+        </div>
+        <div class="row">
+            <hr />
+            <h4 style="text-align: center">More coming soon....</h4>
+        </div>
+    </div>
+
+    <script src="js/ezImageFilter.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
